@@ -42,11 +42,11 @@ public class QuickTileServices extends TileService {
         if (isNightModeOn(uiModeManager)) {
             //switch off the night mode
             uiModeManager.setNightMode(UiModeManager.MODE_NIGHT_NO);
-            if (BuildConfig.DEBUG) Log.d(TAG, "toggleSetting nightMode = off");
+            if (BuildConfig.DEBUG) Log.d(TAG, "toggleSetting set nightMode = off");
         } else {
             // enable night mode
             uiModeManager.setNightMode(UiModeManager.MODE_NIGHT_YES);
-            if (BuildConfig.DEBUG) Log.d(TAG, "toggleSetting nightMode = on");
+            if (BuildConfig.DEBUG) Log.d(TAG, "toggleSetting set nightMode = on");
         }
     }
 

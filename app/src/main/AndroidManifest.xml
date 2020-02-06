@@ -23,7 +23,9 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".LandingPage">
+        <activity
+            android:name=".LandingPage"
+            android:configChanges="uiMode">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
