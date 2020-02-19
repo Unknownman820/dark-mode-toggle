@@ -1,4 +1,4 @@
-package io.github.subhamtyagi.nightmode;
+package com.andrew67.darkmode;
 
 import android.app.UiModeManager;
 import android.content.res.Configuration;

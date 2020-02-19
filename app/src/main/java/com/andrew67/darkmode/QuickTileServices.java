@@ -1,4 +1,4 @@
-package io.github.subhamtyagi.nightmode;
+package com.andrew67.darkmode;
 
 import android.annotation.TargetApi;
 import android.app.UiModeManager;

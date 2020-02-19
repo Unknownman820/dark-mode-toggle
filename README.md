@@ -1,11 +1,8 @@
-# Night mode tile
+# Dark mode
 
- - Get a Tile to quickly enable night mode on your devices.
- - Easy to use
- 
-[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
-     alt="Get it on F-Droid"
-     height="80">](https://f-droid.org/packages/io.github.subhamtyagi.nightmode/)
+ - System-wide dark mode toggle for Android versions 4.1 through 9.0
+ - Offers quick settings tile on Android 7.0 and above
 
-### [MIT License](./LICENSE) 
+### [MIT License](./LICENSE)
+        MIT Copyright 2020 @ Andrés Cordero
         MIT Copyright 2019 @ Shubham Tyagi
