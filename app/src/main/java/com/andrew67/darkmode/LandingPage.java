@@ -2,6 +2,7 @@ package com.andrew67.darkmode;
 
 import android.app.UiModeManager;
 import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.RadioGroup;
@@ -38,8 +39,15 @@ public class LandingPage extends AppCompatActivity implements RadioGroup.OnCheck
                 if (BuildConfig.DEBUG) Log.d(TAG, "updateRadioGroup nightMode = off");
                 break;
             case UiModeManager.MODE_NIGHT_YES:
-                radioGroup.check(R.id.radioNight);
-                if (BuildConfig.DEBUG) Log.d(TAG, "updateRadioGroup nightMode = on");
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ||
+                        uiModeManager.getCurrentModeType() == Configuration.UI_MODE_TYPE_CAR) {
+                    radioGroup.check(R.id.radioNight);
+                    if (BuildConfig.DEBUG) Log.d(TAG, "updateRadioGroup nightMode = on");
+                } else {
+                    radioGroup.check(R.id.radioDay);
+                    if (BuildConfig.DEBUG) Log.d(TAG,
+                            "updateRadioGroup nightMode = off (Android < M and Car Mode disabled)");
+                }
                 break;
             case UiModeManager.MODE_NIGHT_AUTO:
                 radioGroup.check(R.id.radioAuto);
@@ -54,14 +62,20 @@ public class LandingPage extends AppCompatActivity implements RadioGroup.OnCheck
             case R.id.radioDay:
                 if (BuildConfig.DEBUG) Log.d(TAG, "onCheckedChanged set nightMode = off");
                 uiModeManager.setNightMode(UiModeManager.MODE_NIGHT_NO);
+                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M)
+                    uiModeManager.disableCarMode(0);
                 break;
             case R.id.radioNight:
                 if (BuildConfig.DEBUG) Log.d(TAG, "onCheckedChanged set nightMode = on");
+                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M)
+                    uiModeManager.enableCarMode(0);
                 uiModeManager.setNightMode(UiModeManager.MODE_NIGHT_YES);
                 break;
             case R.id.radioAuto:
                 if (BuildConfig.DEBUG) Log.d(TAG, "onCheckedChanged set nightMode = auto");
                 uiModeManager.setNightMode(UiModeManager.MODE_NIGHT_AUTO);
+                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M)
+                    uiModeManager.disableCarMode(0);
                 break;
         }
     }
