@@ -2,6 +2,7 @@ package com.andrew67.darkmode;
 
 import android.annotation.TargetApi;
 import android.app.UiModeManager;
+import android.content.Intent;
 import android.os.Build;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
@@ -14,8 +15,14 @@ public class QuickTileServices extends TileService {
     @Override
     public void onClick() {
         super.onClick();
-        toggleSetting();
-        syncTile();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            final Intent landingPageIntent = new Intent(this, LandingPage.class);
+            landingPageIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivityAndCollapse(landingPageIntent);
+        } else {
+            toggleSetting();
+            syncTile();
+        }
     }
 
     @Override

@@ -1,14 +1,18 @@
 package com.andrew67.darkmode;
 
 import android.app.UiModeManager;
+import android.content.Intent;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
@@ -30,6 +34,23 @@ public class LandingPage extends AppCompatActivity implements RadioGroup.OnCheck
         radioGroup = findViewById(R.id.radioGroup);
         if (savedInstanceState == null) updateRadioGroup();
         radioGroup.setOnCheckedChangeListener(this);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            new AlertDialog.Builder(this)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .setTitle(R.string.toonew_title)
+                    .setMessage(R.string.toonew_msg)
+                    .setCancelable(false)
+                    .setPositiveButton(R.string.toonew_action, (dialog, which) -> {
+                        // Recipe from http://stackoverflow.com/a/32983128
+                        Intent i = new Intent();
+                        i.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                        i.setData(Uri.fromParts("package", LandingPage.this.getPackageName(), null));
+                        startActivity(i);
+                        LandingPage.this.finish();
+                    })
+                    .show();
+        }
     }
 
     private void updateRadioGroup() {

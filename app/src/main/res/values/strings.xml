@@ -12,4 +12,10 @@
     <string name="auto">Auto</string>
     <string name="day_mode">Light</string>
     <string name="action_Settings">Settings</string>
+
+    <!-- "Android Too New" dialog -->
+    <string name="toonew_title">Incompatible Android Version</string>
+    <string name="toonew_msg">Your version of Android already includes built-in support for
+        dark mode and prevents apps from changing the setting</string>
+    <string name="toonew_action">Uninstall</string>
 </resources>
