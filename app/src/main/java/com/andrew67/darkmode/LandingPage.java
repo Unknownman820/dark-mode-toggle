@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.View;
 import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
@@ -35,6 +36,16 @@ public class LandingPage extends AppCompatActivity implements RadioGroup.OnCheck
         if (savedInstanceState == null) updateRadioGroup();
         radioGroup.setOnCheckedChangeListener(this);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            findViewById(R.id.warn_carmode).setVisibility(View.GONE);
+        }
+
+        if (uiModeManager.getNightMode() == UiModeManager.MODE_NIGHT_YES) {
+            findViewById(R.id.info_oems).setVisibility(View.GONE);
+        } else {
+            findViewById(R.id.warn_disable).setVisibility(View.GONE);
+        }
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             new AlertDialog.Builder(this)
                     .setIcon(android.R.drawable.ic_dialog_alert)
@@ -45,7 +56,8 @@ public class LandingPage extends AppCompatActivity implements RadioGroup.OnCheck
                         // Recipe from http://stackoverflow.com/a/32983128
                         Intent i = new Intent();
                         i.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                        i.setData(Uri.fromParts("package", LandingPage.this.getPackageName(), null));
+                        i.setData(Uri.fromParts("package",
+                                LandingPage.this.getPackageName(), null));
                         startActivity(i);
                         LandingPage.this.finish();
                     })
