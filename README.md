@@ -13,9 +13,9 @@
 
 ### Quick Settings Tile
 
-![](storeAssets/screenshot-qs-tile-off.png "")
+![Off](./storeAssets/screenshot-qs-tile-off.png)
 
-![](storeAssets/screenshot-qs-tile-on.png "")
+![On](./storeAssets/screenshot-qs-tile-on.png)
 
 ## License
  - [MIT License](./LICENSE)
