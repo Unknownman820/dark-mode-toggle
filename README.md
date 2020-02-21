@@ -1,14 +1,15 @@
 # Dark Mode
 
-![App logo](./app/src/main/res/mipmap-xhdpi/ic_launcher.png)
+<img alt='App logo' src='https://darkmode.andrew67.com/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png' height='96'>
 
  - System-wide dark mode toggle for Android versions 4.1 through 9.0
  - Offers quick settings tile on Android 7.0 and above
  
 ## Downloads
 
- - Google Play (coming soon)
- - F-Droid (planned)
+<a href='https://play.google.com/store/apps/details?id=com.andrew67.darkmode&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' height='80'></a>
+
+Google Play and the Google Play logo are trademarks of Google LLC.
 
 ## Screenshots
 
