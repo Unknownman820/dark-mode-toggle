@@ -5,9 +5,10 @@ android {
     defaultConfig {
         applicationId "com.andrew67.darkmode"
         minSdkVersion 16
+        maxSdkVersion 28
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0-beta1"
+        versionCode 2
+        versionName "1.0-beta2"
         vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
@@ -26,5 +27,5 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta4'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta6'
 }
