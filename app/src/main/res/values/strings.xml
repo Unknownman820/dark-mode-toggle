@@ -5,6 +5,7 @@
     <string name="auto">Auto</string>
     <string name="day_mode">Light</string>
     <string name="action_Settings">Settings</string>
+    <string name="tile_error">An unexpected error has occurred. Your device may not be compatible.</string>
 
     <!-- Info/Warn strings -->
     <string name="info_oems">Note: some device manufacturers disabled the ability to enable dark
