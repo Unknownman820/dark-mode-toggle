@@ -1,12 +1,11 @@
 <shortcuts xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     tools:targetApi="n_mr1">
-    <!-- TODO: Shortcut icons -->
     <!-- TODO: ShortcutManagerCompat.requestPinShortcut for older Android API versions -->
     <shortcut
         android:shortcutId="toggle"
         android:enabled="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_toggle"
         android:shortcutShortLabel="@string/toggle_long"
         android:shortcutLongLabel="@string/toggle_short">
         <intent
@@ -18,7 +17,7 @@
     <shortcut
         android:shortcutId="light"
         android:enabled="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_light"
         android:shortcutShortLabel="@string/light_long"
         android:shortcutLongLabel="@string/light_short">
         <intent
@@ -30,7 +29,7 @@
     <shortcut
         android:shortcutId="dark"
         android:enabled="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_dark"
         android:shortcutShortLabel="@string/dark_long"
         android:shortcutLongLabel="@string/dark_short">
         <intent
