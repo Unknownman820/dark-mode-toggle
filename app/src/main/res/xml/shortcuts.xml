@@ -1,0 +1,42 @@
+<shortcuts xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:targetApi="n_mr1">
+    <!-- TODO: Shortcut icons -->
+    <!-- TODO: ShortcutManagerCompat.requestPinShortcut for older Android API versions -->
+    <shortcut
+        android:shortcutId="toggle"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/toggle_long"
+        android:shortcutLongLabel="@string/toggle_short">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.andrew67.darkmode"
+            android:targetClass="com.andrew67.darkmode.ShortcutEffect"
+            android:data="content://com.andrew67.darkmode/toggle" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="light"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/light_long"
+        android:shortcutLongLabel="@string/light_short">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.andrew67.darkmode"
+            android:targetClass="com.andrew67.darkmode.ShortcutEffect"
+            android:data="content://com.andrew67.darkmode/light" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="dark"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutShortLabel="@string/dark_long"
+        android:shortcutLongLabel="@string/dark_short">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.andrew67.darkmode"
+            android:targetClass="com.andrew67.darkmode.ShortcutEffect"
+            android:data="content://com.andrew67.darkmode/dark" />
+    </shortcut>
+</shortcuts>

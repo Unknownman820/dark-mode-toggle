@@ -93,7 +93,7 @@ public class QuickTileServices extends TileService {
     @SuppressLint("ShowToast")
     private void displayErrorToast() {
         if (errorToast == null) {
-            errorToast = Toast.makeText(this, R.string.tile_error, Toast.LENGTH_LONG);
+            errorToast = Toast.makeText(this, R.string.toggle_error, Toast.LENGTH_LONG);
         }
         errorToast.show();
     }

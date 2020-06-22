@@ -5,7 +5,7 @@
     <string name="auto">Auto</string>
     <string name="day_mode">Light</string>
     <string name="action_Settings">Settings</string>
-    <string name="tile_error">An unexpected error has occurred. Your device may not be compatible.</string>
+    <string name="toggle_error">An unexpected error has occurred. Your device may not be compatible.</string>
 
     <!-- Info/Warn strings -->
     <string name="info_oems">Note: some device manufacturers disabled the ability to enable dark
@@ -23,4 +23,12 @@
     <string name="toonew_msg">Your version of Android already includes built-in support for
         dark mode and prevents apps from changing the setting</string>
     <string name="toonew_action">Uninstall</string>
+
+    <!-- Shortcuts -->
+    <string name="toggle_long">Toggle Dark Mode On/Off</string>
+    <string name="toggle_short">On/Off</string>
+    <string name="dark_long">Dark Mode On</string>
+    <string name="dark_short">Dark On</string>
+    <string name="light_long">Dark Mode Off</string>
+    <string name="light_short">Dark Off</string>
 </resources>
