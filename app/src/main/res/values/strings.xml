@@ -31,4 +31,8 @@
     <string name="dark_short">Dark On</string>
     <string name="light_long">Dark Mode Off</string>
     <string name="light_short">Dark Off</string>
+    <string name="shortcuts_button">Add shortcuts to launcher</string>
+    <string name="shortcuts_unsupported">Your current launcher or OS does not support adding shortcuts</string>
+    <string name="shortcuts_explanation">Tap an icon to add it to your home screen</string>
+    <string name="done">Done</string>
 </resources>

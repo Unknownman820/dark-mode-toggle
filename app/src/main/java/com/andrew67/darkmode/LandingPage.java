@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
@@ -16,6 +17,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.pm.ShortcutManagerCompat;
 
 public class LandingPage extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
     private static final String TAG = "DarkModePage";
@@ -44,6 +46,16 @@ public class LandingPage extends AppCompatActivity implements RadioGroup.OnCheck
             findViewById(R.id.info_oems).setVisibility(View.GONE);
         } else {
             findViewById(R.id.warn_disable).setVisibility(View.GONE);
+        }
+
+        final Button shortcutsButton = findViewById(R.id.shortcuts_button);
+        if (ShortcutManagerCompat.isRequestPinShortcutSupported(this)) {
+            findViewById(R.id.shortcuts_unsupported).setVisibility(View.GONE);
+            shortcutsButton.setOnClickListener(v -> {
+                new AddShortcutDialog().show(getSupportFragmentManager(), "AddShortcutDialog");
+            });
+        } else {
+            shortcutsButton.setEnabled(false);
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {

@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.andrew67.darkmode">
 
+    <uses-permission
+        android:name="com.android.launcher.permission.INSTALL_SHORTCUT"
+        android:maxSdkVersion="25" />
+
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
