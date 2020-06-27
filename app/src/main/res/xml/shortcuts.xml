@@ -1,7 +1,6 @@
 <shortcuts xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     tools:targetApi="n_mr1">
-    <!-- TODO: ShortcutManagerCompat.requestPinShortcut for older Android API versions -->
     <shortcut
         android:shortcutId="toggle"
         android:enabled="true"
