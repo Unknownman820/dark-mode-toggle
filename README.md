@@ -7,29 +7,24 @@
  
 ## Downloads
 
-<a href='https://play.google.com/store/apps/details?id=com.andrew67.darkmode&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' height='80'></a>
-
- - Google Play and the Google Play logo are trademarks of Google LLC.
+ - [APK from Github](https://github.com/Andrew67/dark-mode-toggle/releases/download/v1.0-beta2/dark-mode-toggle-1.0-beta2.apk)
 
 ## Screenshots
 
 ### Quick Settings Tile
 
-![Off](./storeAssets/screenshot-qs-tile-off.png)
+<img alt='Off' src='./storeAssets/screenshot-qs-tile-off.png' width='180'> <img alt='On' src='./storeAssets/screenshot-qs-tile-on.png' width='180'>
 
-![On](./storeAssets/screenshot-qs-tile-on.png)
+### In-App Toggle
 
-### App Toggle
-
-![Off](./storeAssets/screenshot-app-switch-off.png)
-
-![On](./storeAssets/screenshot-app-switch-on.png)
+<img alt='Off' src='./storeAssets/screenshot-app-switch-off.png' width='180'> <img alt='On' src='./storeAssets/screenshot-app-switch-on.png' width='180'>
 
 ## Privacy Policy
 
  - This app does not collect or transmit any user or device information, ever
  - This website is hosted by GitHub (see their [Privacy Policy](https://help.github.com/en/github/site-policy/github-privacy-statement))
  - If you downloaded the app from Google Play, their [Privacy Policy](https://policies.google.com/privacy) also applies
+ - Thank you Google Play users! 100K+ downloads from 2020 to 2023
 
 ## License
 
