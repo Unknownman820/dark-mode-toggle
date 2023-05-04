@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">夜間模式</string>
+    <string name="night_mode">深色</string>
+    <string name="night_mode_tile">夜間模式</string>
+    <string name="auto">自動</string>
+    <string name="day_mode">淺色</string>
+    <string name="action_Settings">設定</string>
+    <string name="toggle_error">"發生未知錯誤。
+可能與您的裝置不相容。"</string>
+
+    <!-- Info/Warn strings -->
+    <string name="info_oems">部分裝置製造商會將 Android 夜間模式功能封閉，或是提供自製選項。</string>
+    <string name="info_devs">僅限開發者已設計深色主題的應用程式才會依據系統設定變化。</string>
+    <string name="warn_carmode">"警告：您目前的 Android 版本必須啟用行車模式，才能使用夜間模式。
+可能會產生持續性通知圖示與非必要的功能變化。"</string>
+    <string name="warn_disable">"警告：請在解除安裝本應用程式或升級 Android 版本前確認夜間模式已停用。"</string>
+
+    <!-- "Android Too New" dialog -->
+    <string name="toonew_title">Android 版本不相容</string>
+    <string name="toonew_msg">您的 Android 版本已預設夜間模式，且拒絕應用程式變更設定。</string>
+    <string name="toonew_action">解除安裝</string>
+
+    <!-- Shortcuts -->
+    <string name="toggle_long">啟用 / 停用夜間模式</string>
+    <string name="toggle_short">開啟 / 關閉</string>
+    <string name="dark_long">啟用夜間模式</string>
+    <string name="dark_short">啟用深色</string>
+    <string name="light_long">停用夜間模式</string>
+    <string name="light_short">停用深色</string>
+    <string name="shortcuts_button">建立桌面捷徑</string>
+    <string name="shortcuts_unsupported">您目前的啟動器或作業系統不支援建立捷徑</string>
+    <string name="shortcuts_explanation">輕觸圖示即可新增至您的主螢幕</string>
+    <string name="done">完成</string>
+</resources>
